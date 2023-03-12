@@ -88,7 +88,6 @@ p {
 .bg {
     background-image: url('https://img.freepik.com/free-vector/watercolor-leaves-with-copy-space-design_53876-62988.jpg?w=900&t=st=1678639500~exp=1678640100~hmac=ab68b11ae16ca574a60f7a6f91dd7e74b6b1da7e2fe2d8a83686fed95493416b');
     background-repeat: no-repeat;
-    background-size: contain;
     background-size: 100% 100%;
     padding: 20em 5em;
     border-radius: 5px;
@@ -97,7 +96,6 @@ p {
 .contact-bg {
     background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-repeat: no-repeat;
-    background-size: contain;
     background-size: 100% 100%;
     padding: 10em 3em;
     border-radius: 5px;
@@ -133,11 +131,21 @@ p {
     .size-controlled {
         flex-direction: column;
     }
+
+    .centered {
+        margin-left: 16vw;
+        margin-right: 16vw;
+    }
 }
 
 @media all and (max-width: 610px) {
     .logo > img {
         height: 200px;
+    }
+
+    .centered {
+        margin-left: 14vw;
+        margin-right: 14vw;
     }
 }
 
@@ -145,10 +153,20 @@ p {
     .logo > img {
         height: 150px;
     }
+
+    .centered {
+        margin-left: 12vw;
+        margin-right: 12vw;
+    }
 }
 
 @media all and (max-width: 424px) {
     .logo > img {
         height: 100px;
+    }
+
+    .centered {
+        margin-left: 8vw;
+        margin-right: 8vw;
     }
 }
