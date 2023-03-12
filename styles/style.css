@@ -1,0 +1,154 @@
+:root {
+    --faded-bg: #DDDD;
+    --active-bg: #CCCC;
+    --button-border-radius: 10px;
+    --text-color: #111;
+}
+
+@keyframes fadeIn {
+    0% { background-color: auto; }
+    100% { background-color: var(--faded-bg); }
+}
+
+@keyframes fadeOut {
+    100% { background-color: auto; }
+    0% { background-color: var(--faded-bg); }
+}
+
+@keyframes showNavBar {
+    0% { left: -100%; }
+    80% { left: 5%; }
+    100% { left: 0%; }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.nav-bar li {
+    padding: 10 50;
+    cursor: pointer;
+    border-radius: var(--button-border-radius);
+    animation: fadeOut .2s ease-in;
+}
+
+.nav-bar li:hover {
+    background-color: var(--faded-bg);
+    animation: fadeIn .2s ease-in;
+}
+
+.nav-bar .active,
+.nav-bar .active:hover {
+    background-color: var(--active-bg);
+    animation: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.centered {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+.logo > img {
+    height: 300px;
+}
+
+.content {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bg {
+    background-image: url('https://img.freepik.com/free-vector/watercolor-leaves-with-copy-space-design_53876-62988.jpg?w=900&t=st=1678639500~exp=1678640100~hmac=ab68b11ae16ca574a60f7a6f91dd7e74b6b1da7e2fe2d8a83686fed95493416b');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+    padding: 20em 5em;
+    border-radius: 5px;
+}
+
+.contact-bg {
+    background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+    padding: 10em 3em;
+    border-radius: 5px;
+}
+
+.contact-bg > main {
+    background: white;
+    padding: 2em;
+}
+
+.size-controlled {
+    display: flex;
+}
+
+.size-controlled > img {
+    width: 90%;
+    margin: 0 20;
+    max-width: 400px;
+}
+
+@media all and (max-width: 825px) {
+    .nav-bar {
+        position: relative;
+        flex-direction: column;
+        animation: showNavBar 1s ease-in-out;
+    }
+
+    .nav-bar li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .size-controlled {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 610px) {
+    .logo > img {
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .logo > img {
+        height: 150px;
+    }
+}
+
+@media all and (max-width: 424px) {
+    .logo > img {
+        height: 100px;
+    }
+}
